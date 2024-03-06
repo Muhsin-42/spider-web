@@ -17,3 +17,22 @@
     animation-delay: 4s;
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(209 117 182 / 1); /* Color of the scrollbar handle */
+  border-radius: 10px 10px 10px 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(209 117 182 / 2);
+}

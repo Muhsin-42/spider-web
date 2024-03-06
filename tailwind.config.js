@@ -133,9 +133,9 @@ module.exports = {
         },
       },
       animation: {
-        "blob-1": "blob 30s infinite ease",
-        "blob-2": "blob 20s infinite reverse",
-        "blob-3": "blob 40s infinite linear",
+        "blob-1": "moveVertical 20s  infinite ease",
+        "blob-2": "moveInCircle 10s infinite reverse",
+        "blob-3": "moveHorizontal 30s infinite linear",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         first: "moveVertical 20s ease infinite",

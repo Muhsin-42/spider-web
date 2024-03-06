@@ -279,3 +279,23 @@ export const MEETING_ROOMS = [
     ends: "27 Jan, 2023",
   },
 ];
+
+export const SIDE_BARS = [
+  {
+    title: "Events",
+    subItems: ["New Requests", "Estimate", "Events", "Partial Requests"],
+  },
+  {
+    title: "Positions",
+  },
+  {
+    title: "Contractors",
+  },
+  {
+    title: "Users",
+    subItems: ["Admins", "Clients", "Coordinators"],
+  },
+  {
+    title: "Profile",
+  },
+];

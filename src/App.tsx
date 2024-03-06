@@ -1,28 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import EventRequest from "./pages/EventRequest";
-import SingleEvent from "./pages/SingleEvent";
-import Layout from "./pages/Layout";
+import { routes } from "./utils/routes";
 
-const appRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: (
-      <Layout>
-        <EventRequest />
-      </Layout>
-    ),
-  },
-  {
-    path: "/event",
-    element: (
-      <Layout>
-        <SingleEvent />
-      </Layout>
-    ),
-  },
-]);
-
+const appRouter = createBrowserRouter(routes);
 function App() {
   return (
     <>

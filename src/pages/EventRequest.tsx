@@ -23,7 +23,7 @@ const EventRequest = () => {
             src="/assets/plus.svg"
             height={34}
             width={34}
-            className=" bg-gradient-to-r from-[#FF00FF] via-[#FE00FF] to-[#8F00FF]"
+            className=" bg-gradient-to-r from-[#FF00FF] via-[#FE00FF] to-[#8F00FF] rounded-lg border-[3px] border-white"
           />
         </div>
       </div>
