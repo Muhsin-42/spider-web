@@ -6,7 +6,7 @@ interface TableProps {
   data: typeof EVENT_REQUESTS;
 }
 
-const Table = ({ data }: TableProps) => {
+const PositionsTable = ({ data }: TableProps) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
@@ -100,4 +100,4 @@ const Table = ({ data }: TableProps) => {
   );
 };
 
-export default Table;
+export default PositionsTable;

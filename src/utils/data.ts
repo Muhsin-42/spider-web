@@ -202,6 +202,57 @@ export const EVENT_REQUESTS = [
   },
 ] as const;
 
+export const POSITIONS = [
+  {
+    Position: "Camera 1 (Video)",
+    Time: "9am - 7pm",
+    Info: "LP default",
+    Quantity: "20",
+  },
+  {
+    Position: "Camera 2 (Video)",
+    Time: "8am - 6pm",
+    Info: "LP backup",
+    Quantity: "15",
+  },
+  {
+    Position: "Camera 3 (Still)",
+    Time: "10am - 8pm",
+    Info: "Outdoor",
+    Quantity: "10",
+  },
+  {
+    Position: "Camera 4 (Video)",
+    Time: "7am - 5pm",
+    Info: "Indoor",
+    Quantity: "25",
+  },
+  {
+    Position: "Camera 5 (Still)",
+    Time: "9am - 7pm",
+    Info: "Outdoor",
+    Quantity: "12",
+  },
+  {
+    Position: "Camera 6 (Video)",
+    Time: "8am - 6pm",
+    Info: "Indoor",
+    Quantity: "18",
+  },
+  {
+    Position: "Camera 7 (Still)",
+    Time: "10am - 8pm",
+    Info: "Outdoor",
+    Quantity: "22",
+  },
+  {
+    Position: "Camera 8 (Video)",
+    Time: "9am - 7pm",
+    Info: "Indoor",
+    Quantity: "30",
+  },
+] as const;
+
 export const MEETING_ROOMS = [
   {
     title: "Meeting Room 1",

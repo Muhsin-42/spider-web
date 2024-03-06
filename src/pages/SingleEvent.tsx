@@ -1,33 +1,7 @@
-import { useState } from "react";
-import { CalendarIcon } from "@radix-ui/react-icons";
-import { addDays, format } from "date-fns";
-import { DateRange } from "react-day-picker";
-
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 
-import {
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectGroup,
-  SelectLabel,
-  SelectItem,
-} from "@radix-ui/react-select";
-import React from "react";
 import { MEETING_ROOMS } from "@/utils/data";
 const EventRequest = () => {
-  const [date, setDate] = useState<DateRange | undefined>({
-    from: new Date(2022, 0, 20),
-    to: addDays(new Date(2022, 0, 20), 20),
-  });
   return (
     <section className="w-full py-0 z-10 relative">
       <div className="flex justify-between px-10 w-full h-fit py-3 ">
@@ -76,9 +50,9 @@ const EventRequest = () => {
         <h3>Assign Contractor</h3>
         <div className="flex">
           <div className="w-4/12 border-[3px] border-pink1 rounded-lg flex">
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               {MEETING_ROOMS?.map((meeting) => (
-                <div className="flex pl-2 py-2 flex-col border-[3px] border-pink1 rounded-lg my-3 mx-2">
+                <div className="flex pl-2 py-2 w-11/12 flex-col border-[3px] border-pink1 rounded-lg my-3 mx-auto">
                   <div className="flex gap-2">
                     {meeting.title}
                     <span>{meeting.position}</span>
