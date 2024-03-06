@@ -8,7 +8,7 @@ interface TableProps {
 
 const Table = ({ data }: TableProps) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
+  const itemsPerPage = 10;
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -37,16 +37,24 @@ const Table = ({ data }: TableProps) => {
 
   return (
     <div className="text-white w-full ">
-      <div className="">
-        <div className="bg-pink1 py-5  flex justify-start px-10">
-          <span className="w-2/12">Event Name</span>
+      <div className="overflow-x-auto ">
+        <div className="bg-pink1 py-5 min-w-[900px] flex justify-start px-10">
+          <span className="w-2/12 flex gap-3 items-center">
+            Event Name <img alt="down" src="/assets/up-fill.svg" />{" "}
+          </span>
           <span className="w-2/12">Event Start</span>
-          <span className="w-2/12">Event End</span>
-          <span className="w-2/12">Client Name</span>
+          <span className="w-2/12 flex gap-3 items-center">
+            Event End
+            <img alt="down" src="/assets/down-fill.svg" />
+          </span>
+          <span className="w-2/12 flex gap-3 items-center">
+            Client Name
+            <img alt="down" src="/assets/up-fill.svg" />
+          </span>
           <span className="w-2/12">Contact Info</span>
           <span className="w-2/12">Venue</span>
         </div>
-        <div className="flex flex-col justify-start w-full">
+        <div className="flex flex-col justify-start  min-w-[900px]">
           {currentItems.map((row, index) => (
             <div
               className="flex justify-start border-b-[3px] border-pink1 w-full px-10 py-4"
@@ -56,11 +64,11 @@ const Table = ({ data }: TableProps) => {
                 <img src="/assets/eye.svg" alt="eye" />
                 {row["Event Name"]}
               </Link>
-              <div className="w-2/12">{row["Event Start"]}</div>
-              <div className="w-2/12">{row["Event End"]}</div>
-              <div className="w-2/12">{row["Client Name"]}</div>
-              <div className="w-2/12">{row["Contact Info"]}</div>
-              <div className="w-2/12">{row["Venue"]}</div>
+              <div className="w-2/12 text-lg">{row["Event Start"]}</div>
+              <div className="w-2/12 text-lg">{row["Event End"]}</div>
+              <div className="w-2/12 text-lg">{row["Client Name"]}</div>
+              <div className="w-2/12 text-lg">{row["Contact Info"]}</div>
+              <div className="w-2/12 text-lg">{row["Venue"]}</div>
             </div>
           ))}
         </div>

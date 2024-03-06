@@ -4,8 +4,8 @@ import { EVENT_REQUESTS } from "@/utils/data";
 const EventRequest = () => {
   return (
     <section className="w-full py-0 z-10 relative">
-      <div className="flex justify-between px-10 w-full h-fit py-3 ">
-        <h3 className={"text-white py-0"}>Event Request</h3>
+      <div className="flex justify-between px-10 w-full h-fit py-3 max-md:flex-col">
+        <h3 className={"text-white  font-kanit text-4xl"}>Event Requests</h3>
         <div className="flex items-center  h-fit gap-2 ">
           <div className="relative">
             <img

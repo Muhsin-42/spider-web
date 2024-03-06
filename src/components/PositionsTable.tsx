@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { EVENT_REQUESTS } from "@/utils/data";
+import { POSITIONS } from "@/utils/data";
 import clsx from "clsx";
-import { Link } from "react-router-dom";
 interface TableProps {
-  data: typeof EVENT_REQUESTS;
+  data: typeof POSITIONS;
 }
 
 const PositionsTable = ({ data }: TableProps) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
+  const itemsPerPage = 5;
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -38,13 +37,11 @@ const PositionsTable = ({ data }: TableProps) => {
   return (
     <div className="text-white w-full ">
       <div className="">
-        <div className="bg-pink1 py-5  flex justify-start px-10">
-          <span className="w-2/12">Event Name</span>
-          <span className="w-2/12">Event Start</span>
-          <span className="w-2/12">Event End</span>
-          <span className="w-2/12">Client Name</span>
-          <span className="w-2/12">Contact Info</span>
-          <span className="w-2/12">Venue</span>
+        <div className=" py-5 border-b-[3px] border-pink1 flex justify-start px-10">
+          <span className="w-3/12">Position</span>
+          <span className="w-3/12">Time</span>
+          <span className="w-3/12">Info</span>
+          <span className="w-3/12">Quantity</span>
         </div>
         <div className="flex flex-col justify-start w-full">
           {currentItems.map((row, index) => (
@@ -52,15 +49,10 @@ const PositionsTable = ({ data }: TableProps) => {
               className="flex justify-start border-b-[3px] border-pink1 w-full px-10 py-4"
               key={index}
             >
-              <Link to="/event" className="w-2/12 flex gap-2 items-center">
-                <img src="/assets/eye.svg" alt="eye" />
-                {row["Event Name"]}
-              </Link>
-              <div className="w-2/12">{row["Event Start"]}</div>
-              <div className="w-2/12">{row["Event End"]}</div>
-              <div className="w-2/12">{row["Client Name"]}</div>
-              <div className="w-2/12">{row["Contact Info"]}</div>
-              <div className="w-2/12">{row["Venue"]}</div>
+              <div className="w-3/12">{row["Position"]}</div>
+              <div className="w-3/12">{row["Time"]}</div>
+              <div className="w-3/12">{row["Info"]}</div>
+              <div className="w-3/12">{row["Quantity"]}</div>
             </div>
           ))}
         </div>

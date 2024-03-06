@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SIDE_BARS = [
   {
@@ -28,26 +29,26 @@ const RightSidebar = () => {
     sub: "New Requests",
   });
   return (
-    <div className="bg-opacity-0 text-black border-[3px] border-pink1  w-3/12 bg-sky-100  z-10 rounded-2xl">
+    <div className="bg-opacity-0 text-black border-[3px] min-w-[256px] border-pink1  w-3/12 bg-sky-100  z-10 rounded-2xl relative">
       {SIDE_BARS.map((item) => (
         <div className="flex flex-col z-10" key={item.title}>
-          <button
-            onClick={() => console.log("hee")}
+          <Link
+            to="/"
             className={clsx(
-              "main-section-btn z-20",
+              "main-section-btn z-20 text-lg",
               item.title !== activeSection.main && "border-none"
             )}
           >
             {item.title}
             {item.subItems && <FaAngleDown />}
-          </button>
+          </Link>
           <div className=" flex flex-col items-center">
             {item.subItems &&
               item.subItems.map((item, index) => (
                 <div
                   key={index}
                   className={clsx(
-                    "relative  w-9/12 mb-3",
+                    "relative  w-9/12 mb-3 ",
                     activeSection.sub === item ? "mt-1" : "mt-3"
                   )}
                 >
@@ -57,7 +58,7 @@ const RightSidebar = () => {
                   />
                   <button
                     className={clsx(
-                      "text-white block ml-5",
+                      "text-white block ml-5 text-lg",
                       activeSection.sub === item ? "sub-section-btn" : "ml-8"
                     )}
                     key={item}
@@ -69,6 +70,10 @@ const RightSidebar = () => {
           </div>
         </div>
       ))}
+      <button className="bg-black flex items-center text-white py-3 rounded-lg w-10/12 justify-center gap-3 mx-auto absolute bottom-5 left-8  shadow-pink1  shadow-2xl animate-pulse">
+        <img src="/assets/logout.svg" alt="logout" />
+        Logout
+      </button>
     </div>
   );
 };

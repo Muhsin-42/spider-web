@@ -3,12 +3,12 @@ const Header = () => {
     <header className="flex w-full justify-center items-center ">
       <img src="/assets/info.svg" alt="info" />
       <img src="/assets/notification.svg" alt="notification" />
-      <div className=" flex h-fit gap-3 items-center">
+      <div className=" flex h-fit gap-5 items-center">
         <div className="text-white">
-          <p>
+          <p className="text-xl">
             Hi, <span className="text-green1">Muhammad Asad</span>
           </p>
-          <p>welcome back!</p>
+          <p className="text-xl">welcome back!</p>
         </div>
         <div className="relative">
           <div className="absolute -inset-1 bg-pink1/80 blur-lg rounded-full"></div>
