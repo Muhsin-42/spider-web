@@ -4,7 +4,6 @@ const BackgroundGradient = ({ children }: { children: ReactNode }) => {
   return (
     <div className="relative overflow-hidden">
       <div className="animate-blob-1 animation-delay-2s mix-blend-hard-light filter blur-3xl opacity-100  absolute top-0 size-[1000px] right-0 bg-[#383a8f] rounded-full"></div>
-      {/* <div className="animate-blob-2 animation-delay-4s mix-blend-hard-light filter blur-3xl opacity-20  absolute top-0 size-[1000px] -bottom-8 left-20 bg-violet-500 rounded-full"></div> */}
       <div className="animate-blob-3 animation-delay-2s mix-blend-hard-light filter blur-3xl opacity-10  absolute top-96 size-[1000px]  bg-pink-300 rounded-full"></div>
       {children}
     </div>

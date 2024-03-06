@@ -19,7 +19,7 @@ const RightSidebar = () => {
   };
 
   return (
-    <div className="bg-opacity-0 text-black border-[3px] min-w-[256px] border-pink1  w-3/12 bg-sky-100  z-10 rounded-2xl relative">
+    <aside className="bg-opacity-0 text-black border-[3px] min-w-[256px] border-pink1  w-3/12 bg-sky-100  z-10 rounded-2xl relative">
       {SIDE_BARS.map((item) => (
         <div className="flex flex-col z-10" key={item.title}>
           <Link
@@ -78,7 +78,7 @@ const RightSidebar = () => {
           </button>
         </BgShadow>
       </div>
-    </div>
+    </aside>
   );
 };
 
