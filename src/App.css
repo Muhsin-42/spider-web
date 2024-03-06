@@ -8,3 +8,12 @@
 .sub-section-btn {
   @apply border-2 border-pink1 z-10 rounded-lg px-3 w-11/12  items-center py-2 text-left mt-2 mx-auto font-bold flex justify-between text-white;
 }
+
+@layer utilities {
+  .animation-delay-2s {
+    animation-delay: 2s;
+  }
+  .animation-delay-4s {
+    animation-delay: 4s;
+  }
+}

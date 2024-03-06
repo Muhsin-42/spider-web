@@ -278,10 +278,4 @@ export const MEETING_ROOMS = [
     starts: "24 Jan, 2023",
     ends: "27 Jan, 2023",
   },
-  {
-    title: "Meeting Room 5",
-    position: 16,
-    starts: "28 Jan, 2023",
-    ends: "31 Jan, 2023",
-  },
 ];

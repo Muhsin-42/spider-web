@@ -21,6 +21,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        'kanit': ['Kanit', 'sans-serif'],
+      },
       colors: {
         pink1: '#d175b6', 
         green1: '#00EEC5', 
@@ -64,6 +67,29 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        blob:{
+          "0%":{
+            transform: "translate(0px, 0px) scale(1)"
+          },
+          "20%":{
+            transform: "translate(30px, 120px) scale(1)"
+          },
+          "40%":{
+            transform: "translate(120px, 250px) scale(1)"
+          },
+          "60%":{
+            transform: "translate(250px, 350px) scale(1)"
+          },
+          "60%":{
+            transform: "translate(350px, 500px) scale(1)"
+          },
+          "80%":{
+            transform: "translate(350px, 500px) scale(1)"
+          },
+          "100%":{
+            transform: "translate(0px,0px) scale(1)"
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -107,13 +133,16 @@ module.exports = {
         },
       },
       animation: {
+        "blob-1": "blob 30s infinite ease",
+        "blob-2": "blob 20s infinite reverse",
+        "blob-3": "blob 40s infinite linear",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        first: "moveVertical 30s ease infinite",
-        second: "moveInCircle 20s reverse infinite",
-        third: "moveInCircle 40s linear infinite",
-        fourth: "moveHorizontal 40s ease infinite",
-        fifth: "moveInCircle 20s ease infinite",
+        first: "moveVertical 20s ease infinite",
+        second: "moveInCircle 10s reverse infinite",
+        third: "moveInCircle 30s linear infinite",
+        fourth: "moveHorizontal 20s ease infinite",
+        fifth: "moveInCircle 10s ease infinite",
       },
     },
   },
